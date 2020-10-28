@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>The Student List</title>
+</head>
+<body>
+<div class="container">
+    <h3>Students List</h3>
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="StudentList:${studentlist}">
+            <td th:text="${StudentList.firstName}"></td>
+            <td th:text="${StudentList.lastName}"></td>
+            <td th:text="${StudentList.email}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
