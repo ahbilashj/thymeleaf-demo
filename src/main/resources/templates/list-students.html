@@ -18,10 +18,10 @@
         </thead>
 
         <tbody>
-        <tr th:each="StudentList:${studentlist}">
-            <td th:text="${StudentList.firstName}"></td>
-            <td th:text="${StudentList.lastName}"></td>
-            <td th:text="${StudentList.email}"></td>
+        <tr th:each="tempStudentList:${students}">
+            <td th:text="${tempStudentList.firstName}"></td>
+            <td th:text="${tempStudentList.lastName}"></td>
+            <td th:text="${tempStudentList.email}"></td>
         </tr>
         </tbody>
     </table>
